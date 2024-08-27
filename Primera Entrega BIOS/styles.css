@@ -1,0 +1,146 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f0f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Estilos del header */
+header {
+    background-color: #6200ee;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+/* Estilos del main y contenedor de la entrada */
+main {
+    padding: 20px;
+}
+
+.task-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos del input y textarea */
+input[type="text"], textarea {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #6200ee;
+    outline: none;
+}
+
+/* Estilos del botón */
+button {
+    padding: 10px;
+    background-color: #6200ee;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4500bb;
+}
+
+/* Estilos de la lista de tareas */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+li.completed h3, li.completed p {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+li .task-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+/* Estilos del botón de acción */
+li .task-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 20px; /* Ajusta el tamaño del ícono */
+    transition: color 0.3s ease;
+}
+
+/* Color de los íconos en hover */
+li .task-actions button:hover {
+    color: #6200ee;
+}
+
+/* Color de los íconos para cada acción específica */
+li .task-actions .complete-task {
+    color: #4caf50; /* Verde para completar */
+}
+
+li .task-actions .edit-task {
+    color: #ff9800; /* Naranja para editar */
+}
+
+li .task-actions .delete-task {
+    color: #f44336; /* Rojo para eliminar */
+}
+
+/* Media queries para hacer responsivo */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+    
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
